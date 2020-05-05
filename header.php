@@ -13,6 +13,9 @@
       }
     ?>
   </title>
+  <?php
+    wp_head(); // All WP styles, scripts, meta, etc will output here
+  ?> 
 </head>
 <body>
   <h1>
@@ -25,3 +28,9 @@
       }
     ?>
   </h1>
+  <nav>
+      <h2>Website Navigation ( Manin Menu)</h2>
+      <?php wp_nav_menu( array ( 
+          'theme_location' => 'main_menu' 
+      ) ); ?>
+  </nav>
